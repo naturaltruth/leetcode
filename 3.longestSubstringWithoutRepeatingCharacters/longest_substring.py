@@ -7,9 +7,9 @@
 #	> Mail: zhoujin1224@gmail.com
 #	> Created Time: Wed 03 Dec 2014 08:36:10 AM CST
 #	> Brief: Given a string, find the length of the longest substring
-#            without repeating characters. For example, the longest 
+#            without repeating characters. For example, the longest
 #            substring without repeating letters for "abcabcbb" is "abc",
-#            which the length is 3. For "bbbbb" the longest substring is "b", 
+#            which the length is 3. For "bbbbb" the longest substring is "b
 #            with the length of 1.
 ############################################
 

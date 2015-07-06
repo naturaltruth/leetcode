@@ -3,19 +3,19 @@
 	> Author: zhoujin
 	> Mail: zhoujin1224@gmail.com
 	> Created Time: Tue 09 Dec 2014 01:52:18 AM CST
-	> Brief: 
+	> Brief:
  ************************************************************************/
 #include <iostream>
 using namespace std;
 
 //Definition for singly-linked list.
- 
+
 struct ListNode {
     int val;
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
- 
+
 class Solution {
 public:
     ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {

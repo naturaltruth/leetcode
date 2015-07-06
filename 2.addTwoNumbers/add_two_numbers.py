@@ -2,11 +2,11 @@
 # coding=utf-8
 
 ############################################
-#	> File Name: add_two_numbers.py
-#	> Author: zhoujin
-#	> Mail: zhoujin1224@gmail.com
-#	> Created Time: Tue 09 Dec 2014 12:32:31 AM CST
-#	> Brief: You are given two linked lists representing
+# > File Name: add_two_numbers.py
+# > Author: zhoujin
+# > Mail: zhoujin1224@gmail.com
+# > Created Time: Tue 09 Dec 2014 12:32:31 AM CST
+# > Brief: You are given two linked lists representing
 #            two non-negative numbers. The digits are stored
 #            in reverse order and each of their nodes contain
 #            a single digit. Add the two numbers and return it
@@ -15,10 +15,10 @@
 #            Output: 7 -> 0 -> 8
 ############################################
 
-# Definition for singly-linked list.  
-class ListNode: 
-    def __init__(self, x): 
-        self.val = x 
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, x):
+        self.val = x
         self.next = None
 
 class Solution:
