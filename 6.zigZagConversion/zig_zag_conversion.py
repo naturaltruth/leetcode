@@ -35,4 +35,56 @@ class Solution:
     # @param {integer} numRows
     # @return {string}
     def convert(self, s, numRows):
-        pass
+        s_len = len(s)
+        if s_len == 0 or numRows <= 1:
+            return s
+        
+        ret = []
+        row = 0
+        while (row < numRows and row < s_len):
+            idx = row
+            ret.append(s[idx])
+            col = 1
+            while idx < s_len:
+                if row == 0 or row == numRows - 1:
+                    idx += 2 * numRows - 2
+                else:
+                    if col % 2 == 1:
+                        idx += 2 * (numRows - row - 1)
+                    else:
+                        idx += 2 * row
+                if idx < s_len:
+                    ret.append(s[idx])
+                col += 1
+            row += 1
+
+        return ''.join(ret)
+
+    def convert2(self, s, numRows):
+        s_len = len(s)
+        if s_len == 0 or numRows <= 1:
+            return s
+        
+        ret = ''
+        row = 0
+        while (row < numRows and row < s_len):
+            idx = row
+            ret += s[idx]
+            col = 1
+            while idx < s_len:
+                if row == 0 or row == numRows - 1:
+                    idx += 2 * numRows - 2
+                else:
+                    if col % 2 == 1:
+                        idx += 2 * (numRows - row - 1)
+                    else:
+                        idx += 2 * row
+                if idx < s_len:
+                    ret += s[idx]
+                col += 1
+            row += 1
+
+        return ret
+
+sol = Solution()
+print sol.convert("PAYPALISHIRING", 3)

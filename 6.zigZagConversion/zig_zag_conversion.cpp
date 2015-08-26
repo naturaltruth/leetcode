@@ -43,3 +43,35 @@
 
 using namespace std;
 
+class Solution {
+  public:
+    string convert(string s, int numRows) {
+        int len = s.length();
+        if (len == 0 || numRows <=1) return s;
+
+        string ret = "";
+        for (int row = 0; row < len && row < numRows; ++row) {
+            int idx = row;
+            ret += s[idx];
+
+            for (int col = 1; idx < len; ++col) {
+                if (row == 0 || row == numRows - 1) {
+                    idx += 2 * numRows - 2;
+                } else {
+                    if (col & 0x01) idx += 2 * (numRows - row - 1);
+                    else idx += 2 * row;
+                }
+                if (idx < len) ret += s[idx];
+            }
+        }
+
+        return ret;
+    }
+};
+
+int main() {
+    Solution sol = Solution();
+    cout << sol.convert("PAYPALISHIRING", 3) << endl;
+
+    return 0;
+}
