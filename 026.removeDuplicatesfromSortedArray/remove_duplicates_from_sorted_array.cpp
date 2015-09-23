@@ -38,7 +38,6 @@ class Solution {
                 continue;
             }
             num = nums[i];
-            nums[i] = nums[uniq_size - 1];
             nums[uniq_size] = num;
             ++uniq_size;
         }
@@ -50,9 +49,9 @@ class Solution {
 
 int main () {
     Solution sol = Solution();
-    int a[10] = {1, 1, 2, 2, 2, 3, 3, 4, 4, 5};
+    int a[] = {1, 1, 2, 2, 2, 3, 3, 4, 4, 5};
     vector<int> nums;
-    nums.insert(nums.begin(), a, a + 10);
+    nums.insert(nums.begin(), a, a + sizeof(a) / sizeof(int));
 
     int size = sol.removeDuplicates(nums);
     cout << size << endl;
@@ -61,5 +60,15 @@ int main () {
     }
     cout << endl;
 
+    int b[] = {1, 1, 1, 1, 1, 1};
+    nums.clear();
+    nums.insert(nums.begin(), b, b + sizeof(b) / sizeof(int));
+
+    size = sol.removeDuplicates(nums);
+    cout << size << endl;
+    for (int i = 0; i < size; ++i) {
+        cout << nums[i] << " ";
+    }
+    cout << endl;
     return 0;
 }
